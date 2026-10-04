@@ -1,0 +1,82 @@
+/* Admin-only additions on top of style.css */
+
+#admin-app { max-width: 720px; margin: 0 auto; padding: 16px; padding-bottom: 100px; }
+
+.admin-header { margin-bottom: 16px; }
+.admin-header h1 { color: var(--wine); font-size: 26px; }
+.admin-header p { font-size: 13px; color: #6b5a4f; margin: 4px 0 0; }
+
+.lock-screen {
+  max-width: 320px; margin: 60px auto; text-align: center;
+}
+.lock-screen input {
+  width: 100%; padding: 12px; font-size: 16px;
+  border: 1px solid var(--gold-line); margin: 12px 0;
+}
+
+.admin-row {
+  display: flex; gap: 10px; align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--gold-line);
+  padding: 10px;
+  margin-bottom: 8px;
+}
+.admin-row .thumb {
+  width: 48px; height: 60px; flex: none;
+  background: #F1E7D4; display: flex; align-items: center; justify-content: center;
+  font-size: 9px; text-align: center; color: var(--wine-dark); overflow: hidden;
+}
+.admin-row .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.admin-row-info { flex: 1; min-width: 0; }
+.admin-row-info .name { font-weight: 600; font-size: 14px; margin: 0; }
+.admin-row-info .meta { font-size: 12px; color: #6b5a4f; margin: 2px 0; }
+
+.admin-stock-controls {
+  display: flex; align-items: center; gap: 6px; flex: none;
+}
+.admin-stock-controls button {
+  width: 30px; height: 30px;
+  border: 1px solid var(--gold-line);
+  background: var(--surface);
+  font-size: 16px; cursor: pointer;
+}
+.admin-stock-controls input {
+  width: 42px; text-align: center;
+  padding: 6px 2px;
+  border: 1px solid var(--gold-line);
+  font-size: 14px;
+}
+.admin-row.zero-stock { background: #FBEAE3; }
+.admin-row.low-stock { background: #FCF3DE; }
+
+.mark-sold-out {
+  font-size: 11px;
+  border: 1px dashed var(--gold-line);
+  background: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: var(--danger);
+  flex: none;
+}
+
+.category-heading {
+  font-family: "Cormorant Garamond", serif;
+  color: var(--teal);
+  font-size: 18px;
+  margin: 20px 0 8px;
+}
+
+.sticky-bar {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: var(--bg);
+  border-top: 2px solid var(--gold-line);
+  padding: 12px 16px;
+  display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+}
+
+.admin-note {
+  font-size: 12px; color: #6b5a4f; text-align: center;
+  padding: 8px 16px 0;
+}
+
+.changed-flag { color: var(--success); font-size: 11px; margin-left: 6px; }
